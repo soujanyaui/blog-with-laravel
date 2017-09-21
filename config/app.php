@@ -162,13 +162,15 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
-        HTMLMin\HTMLMin\HTMLMinServiceProvider::class,
+
+
 
         /*
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        HTMLMin\HTMLMin\HTMLMinServiceProvider::class,
 
         /*
          * Application Service Providers...

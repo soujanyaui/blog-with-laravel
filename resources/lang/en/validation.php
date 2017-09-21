@@ -99,6 +99,7 @@ return [
     |
     */
 
+
     'custom' => [
         'title' => [
             'required' => 'title can not be blank',
@@ -106,7 +107,17 @@ return [
         'body'=>[
             'required' => 'body can not be blank',
         ],
+        'name'=>[
+            'required' => 'Name can not be blank',
+        ],
+//        'email'=>[
+//            'required' => 'Email can not be blank',
+//        ],
+        'message'=>[
+            'required' => 'Message can not be blank',
+        ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------

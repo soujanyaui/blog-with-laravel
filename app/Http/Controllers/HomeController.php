@@ -53,16 +53,16 @@ class HomeController extends Controller
         ]);
         ContactUS::create($request->all());
 
-        Mail::send('mail',
-            array(
-                'name' => $request->get('name'),
-                'email' => $request->get('email'),
-                'user_message' => $request->get('message')
-            ), function($message)
-            {
-                $message->from('spabbathi@tradenavigator.com');
-                $message->to('javvaji.soujanya4@gmail.com', 'Admin')->subject('welcome to email');
-            });
+//        Mail::send('mail',
+//            array(
+//                'name' => $request->get('name'),
+//                'email' => $request->get('email'),
+//                'user_message' => $request->get('message')
+//            ), function($message)
+//            {
+//                $message->from('spabbathi@tradenavigator.com');
+//                $message->to('javvaji.soujanya4@gmail.com', 'Admin')->subject('welcome to email');
+//            });
 
 
 

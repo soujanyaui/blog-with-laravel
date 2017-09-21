@@ -31,7 +31,7 @@ Auth::routes();
 //        return view('emails.mailme');
 //
 //    } );
-    Route::post('contact-us', ['as'=>'contactus.store','uses'=>'HomeController@contactUSPost']);
+    Route::post('contact-us','HomeController@contactUSPost')->name ('contactus.store');
 
     Route::resource('posts', 'PostController');
     Route::resource('tasks', 'TaskController');

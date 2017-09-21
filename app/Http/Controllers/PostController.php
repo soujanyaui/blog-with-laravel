@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Support\Facades\Session;
 use App\Post;
 
@@ -46,11 +47,17 @@ class PostController extends Controller
     public function store(Request $request)
     {
         // validate the data
-        $this->validate($request,array(
+        $this->validate($request,[
             'title' => 'required|max:255',
             'slug' =>'required|alpha_dash|min:5|max:255|unique:posts,slug',
             'body'  => 'required'
-        ));
+        ],
+        [
+            'title.required' => 'Title must be unique',
+            'body.required'  => 'Body must be min 300 characters'
+            ]);
+
+
         //storing in the DB
         $post = new Post;                                                 // creating a brand new row in db with new instance
             $post->title = $request->title;

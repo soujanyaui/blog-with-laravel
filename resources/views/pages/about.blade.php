@@ -1,17 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                {{--<div class="jumbotron">--}}
-                    {{--<h1 class="display-3">Welcome to my about page </h1>--}}
-                    {{--<p class="lead">Thank you for visiting the website</p>--}}
-                    {{--<p class="lead">--}}
-                        {{--<a class="btn btn-primary btn-lg" href="#" role="button">Popular Post</a>--}}
-                    {{--</p>--}}
-                {{--</div>--}}
                 <code>
                     <p><b>Payment Information:</b></p>
                     <fieldset>
@@ -19,15 +11,11 @@
                         <input type="radio" name="payment" value="Master Card" />Master Card &nbsp;
                         <input type="radio" name="payment" value="American Express" />American Express &nbsp;
                         <input type="radio" name="payment" value="Discover" />Discover <br /><br />
-                        <label>Card Number:</label>
-                        <input type="text" name="cardNumber" id="cardNum" size="30" value="" />
+                        {{--<label>Card Number:</label>--}}
+                        {{--<input type="text" name="cardNumber" id="cardNum" size="30" value="" />--}}
                         <input type="submit" onblur="ValidateCreditCardNumber()">
                     </fieldset>
                 </code>
-
-
-
-
             </div>
         </div>
     </div> <!-- end container-->

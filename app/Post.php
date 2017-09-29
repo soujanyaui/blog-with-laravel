@@ -10,4 +10,8 @@ class Post extends Model
     protected $fillable = [
         'title', 'body',
     ];
+    public function product(){
+        return $this->belongsTo('SCM\Product','product_id');
+    }
+
 }

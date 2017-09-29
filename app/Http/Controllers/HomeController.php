@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreBlogPost;
 use Illuminate\Http\Request;
 use App\ContactUS;
 use Mail;
@@ -44,13 +45,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function contactUSPost(Request $request)
+    public function contactUSPost(StoreBlogPost $request)
     {
-        $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required|email',
-            'message' => 'required'
-        ]);
+
         ContactUS::create($request->all());
 
 //        Mail::send('mail',

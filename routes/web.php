@@ -1,7 +1,11 @@
 <?php
 use App\Post;
-//use App\Mail\mailme;
+//use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\StoreBlogPost;
+use App\Jobs\SendEmailJob;
+use Carbon\Carbon;
+use App\Events\TaskEvent;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +28,22 @@ Auth::routes();
 
 
     Route::get('about', 'HomeController@about');
+    Route::get('sendEmail', function(){
+        $job = (new SendEmailJob())
+            ->delay(Carbon::now()->addSeconds(5));
+        dispatch($job);
+//        dispatch(new SendEmailJob());
+
+        return view('emails.mailme');
+
+    });
     Route::get('contact-us', 'HomeController@contactUS');
+    Route::get('event', function (){
+        event(new TaskEvent('Hello how are you'));
+    });
+Route::get('listen', function (){
+    return view('emails.listenBroadcast');
+});
 //    Route::get('contact-us',function (){
 //        Mail::to('javvaji.soujanya4@gmail.com')->send(new mailme);
 //
@@ -33,7 +52,12 @@ Auth::routes();
 //    } );
     Route::post('contact-us','HomeController@contactUSPost')->name ('contactus.store');
 
+//    Route::get('password/reset/{token}', 'Auth\ResetPassswordController@showResetForm');
+//    Route::post('password/email', 'Auth\ResetPassswordController@sendResetLinkEmail');
+//    Route::post('password/reset', 'Auth\ResetPassswordController@reset');
     Route::resource('posts', 'PostController');
     Route::resource('tasks', 'TaskController');
-//Route::get('/songs', 'SongsController')->name('songs');
+
+Route::get('/admin','AdminController@index');
+
 

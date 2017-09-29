@@ -51,14 +51,8 @@ class PostController extends Controller
             'title' => 'required|max:255',
             'slug' =>'required|alpha_dash|min:5|max:255|unique:posts,slug',
             'body'  => 'required'
-        ],
-        [
-            'title.required' => 'Title must be unique',
-            'body.required'  => 'Body must be min 300 characters'
-            ]);
-
-
-        //storing in the DB
+        ]);
+            //storing in the DB
         $post = new Post;                                                 // creating a brand new row in db with new instance
             $post->title = $request->title;
             $post->slug = $request->slug;
@@ -105,7 +99,7 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $post =post::find($id);
+        $post = post::find($id);
         if($request->input('slug')== $post->slug){
             $this->validate($request,array(
                 'title' => 'required|max:255',

@@ -8391,3 +8391,7 @@ textarea.parsley-error {
   margin-top: 18px;
 }
 
+.content {
+  display: none;
+}
+

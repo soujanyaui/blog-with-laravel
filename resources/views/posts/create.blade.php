@@ -17,7 +17,6 @@
                 {{--,'data-parsley-validate'=>''--}}
                 {!! Form::open(array('route' => 'posts.store')) !!}
                 {!! csrf_field() !!}
-                {{--{!! Form::open(array(['route' => 'posts.store'])) !!}--}}
                 <div class="form-group"  {{ $errors->has('title') ? 'has-error' : '' }}>
                 {{Form::label('title','Title:',array('class'=>'margin-top-10'))}}
                 {{Form::text('title',null,array('class'=>'form-control','maxlength'=>'255'))}}

@@ -24,8 +24,9 @@
         </div>
 
         <div class="form-group">
-            <button class="btn btn-success">Contact US!</button>
+            <input type="submit" class="btn btn-success"/>
         </div>
+        {!! app('captcha')->render(); !!}
 
         {!! Form::close() !!}
     </div>

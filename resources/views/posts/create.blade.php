@@ -14,8 +14,8 @@
                         {{ Session::get('success') }}
                     </div>
                 @endif
-                {{--,'data-parsley-validate'=>''--}}
-                {!! Form::open(array('route' => 'posts.store')) !!}
+                {{----}}
+                {!! Form::open(array('route' => 'posts.store','data-parsley-validate'=>'')) !!}
                 {!! csrf_field() !!}
                 <div class="form-group"  {{ $errors->has('title') ? 'has-error' : '' }}>
                 {{Form::label('title','Title:',array('class'=>'margin-top-10'))}}

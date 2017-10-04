@@ -87,6 +87,6 @@
     </div>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/parsley.min.js') }}"></script>
+    {{--<script src="{{ asset('js/parsley.min.js') }}"></script>--}}
 </body>
 </html>

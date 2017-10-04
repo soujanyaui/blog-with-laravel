@@ -13,7 +13,7 @@ class CreateAdminrolesTable extends Migration
      */
     public function up()
     {
-        Schema::create('adminroles', function (Blueprint $table) {
+        Schema::create('admin_roles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();

@@ -16,6 +16,7 @@ return [
     'defaults' => [
         'guard' => 'web',
         'passwords' => 'users',
+
     ],
 
 
@@ -80,7 +81,7 @@ return [
         ],
         'adminroles' => [
             'driver' => 'eloquent',
-            'model' => App\Admin::class,
+            'model' => App\AdminRoles::class,
         ],
 
         // 'users' => [
@@ -111,9 +112,9 @@ return [
             'expire' => 60,
         ],
         'adminroles' => [
-            'provider' => 'adminroles',
+            'provider' => 'adminroles',//model name
             'table' => 'password_resets',
-            'expire' => 50,
+            'expire' => 15,
         ],
     ],
 

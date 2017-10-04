@@ -7,7 +7,7 @@
 
 require('./bootstrap');
 window.$ = window.jQuery = jQuery = require('jquery');
-//require('./parsley');
+var parsley = require("parsleyjs");
 
 
 window.Vue = require('vue');

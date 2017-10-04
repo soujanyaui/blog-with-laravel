@@ -58,7 +58,7 @@ class HomeController extends Controller
 //            ), function($message)
 //            {
 //                $message->from('spabbathi@tradenavigator.com');
-//                $message->to('javvaji.soujanya4@gmail.com', 'Admin')->subject('welcome to email');
+//                $message->to('javvaji.soujanya4@gmail.com', 'AdminRoles')->subject('welcome to email');
 //            });
 
 

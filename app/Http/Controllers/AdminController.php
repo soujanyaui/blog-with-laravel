@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreBlogPost;
+
 use Illuminate\Http\Request;
-use App\ContactUS;
-use Mail;
+
+
+
+use App\AdminRoles;
 
 
 class AdminController extends Controller
@@ -30,6 +32,7 @@ class AdminController extends Controller
 
         return view('pages.about');
     }
+
 
 
 

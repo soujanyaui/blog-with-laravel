@@ -15,7 +15,8 @@
                             </div>
                         @endif
 
-                        You are logged in!
+                     @component('components.who')
+                         @endcomponent
                     </div>
                 </div>
             </div>

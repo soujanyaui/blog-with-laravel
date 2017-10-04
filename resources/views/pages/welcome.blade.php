@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
-
     <div class="container">
         <div class="row">
         <div class="col-md-12 btn-h1-margin">
@@ -13,6 +11,8 @@
             <a class="btn btn-primary btn-lg" href="#" role="button">Popular Post</a>
         </p>
     </div>
+            @component('components.who')
+            @endcomponent
         </div>
         </div>
 

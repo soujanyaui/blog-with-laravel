@@ -7,9 +7,10 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-//@import "node_modules/parsleyjs/src/parsley.css";
+//@import "~node_modules/parsleyjs";
 
-//@import "node_modules/parsleyjs/src/vendor";
+//@import "~node_modules/parsleyjs/src/parsley.css";
+
 $margin-top-10 :10px;
 
 .margin-top-10{

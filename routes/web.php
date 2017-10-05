@@ -67,7 +67,7 @@ Route::get('listen', function () {
 
     //password reset routes
      Route::post('/password/email','Auth\AdminForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');//step2
-     Route::get('/password/reset','Auth\AdminForgotPasswordController@showLinkRequestForm ')->name('admin.password.request');//step1
+     Route::get('/password/reset','Auth\AdminForgotPasswordController@showLinkRequestForm')->name('admin.password.request');//step1
      Route::post('/password/reset','Auth\AdminResetPasswordController@reset');//step4
      Route::get('/password/reset/{token}','Auth\AdminResetPasswordController@showResetForm')->name('admin.password.reset');//step3
 

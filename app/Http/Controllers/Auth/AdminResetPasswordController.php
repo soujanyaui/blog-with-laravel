@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Auth;
 
+
 class AdminResetPasswordController extends Controller
 {
     /*
@@ -39,7 +40,7 @@ class AdminResetPasswordController extends Controller
     {
         $this->middleware('guest:admin');
     }
-    public function guard()
+    protected function guard()
     {
         return Auth::guard('admin');
     }

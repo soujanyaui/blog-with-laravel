@@ -113,7 +113,7 @@ class PostController extends Controller
             'body'  => 'required'
         ));
         }
-        $post = Post::find($id);                                     // same as store method instead of creating a new instance we use find method to specific post based on id and update in db it
+        $post = Post::find($id);                                     // same as store method instead of creating a new instance we use find method to specific post based on id and update in Database
                                                                      // does'nt create a new row it updates the content in existing row
         $post->title = $request->input('title');
         $post->slug = $request->input('slug');

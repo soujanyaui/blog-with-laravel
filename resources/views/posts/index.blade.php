@@ -32,6 +32,7 @@
                 </tbody>
             </table>
            <h4 class="text-center"> {!! $posts->total(). ' of ' .  $posts->currentPage() . ' posts ' !!}</h4>
+
             <div class="text-center">
                 {!! $posts->links(); !!}
             </div>
